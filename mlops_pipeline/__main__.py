@@ -15,7 +15,6 @@ run_time = timedelta(minutes=RUN_TIME)
 start_time = datetime.now()
 current_time = start_time
 mlflow.set_experiment("/heart")
-print("a")
 
 while run_time > current_time-start_time:
 
