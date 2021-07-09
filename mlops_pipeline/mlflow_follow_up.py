@@ -1,5 +1,3 @@
-import os
-import pickle
 from mlflow import log_metric, log_param
 import mlflow.sklearn
 from mlops_pipeline.modelisation import get_data, get_params, make_model
@@ -24,4 +22,9 @@ def run_model(file):
     # Save model into mlflow / make it accesible
     mlflow.sklearn.log_model(model, "model")
     mlflow.end_run()
+
+    return model, score
+
+
+
 
